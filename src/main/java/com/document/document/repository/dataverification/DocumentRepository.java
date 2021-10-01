@@ -1,4 +1,4 @@
-package com.document.document.repository;
+package com.document.document.repository.dataverification;
 
 import com.document.document.domain.Document;
 import org.springframework.data.jpa.repository.JpaRepository;

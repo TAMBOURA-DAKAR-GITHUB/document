@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface TypeService {
 
-    public Type addServices(Type type);
+    public Type addTypes(Type type);
     public List<Type> listeType();
     public  Type listeById(long id);
     public Type UpdateType(Type type);

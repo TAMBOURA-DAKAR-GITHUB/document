@@ -1,7 +1,7 @@
 package com.document.document.service.Impdocservice;
 
 import com.document.document.domain.Roles;
-import com.document.document.repository.RolesRepository;
+import com.document.document.repository.dataverification.RolesRepository;
 import com.document.document.service.docservice.RolesService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;

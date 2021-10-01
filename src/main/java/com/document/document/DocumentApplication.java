@@ -42,9 +42,9 @@ public class DocumentApplication implements CommandLineRunner {
 		Roles roles2= rolesServiceImp.addRoles(new Roles("Agent"));
 
 
-		Type type1= typeServiceImp.addServices(new Type("pdf"));
-		Type type2= typeServiceImp.addServices(new Type("world"));
-		Type type3= typeServiceImp.addServices(new Type("ppt"));
+		Type type1= typeServiceImp.addTypes(new Type("pdf"));
+		Type type2= typeServiceImp.addTypes(new Type("world"));
+		Type type3= typeServiceImp.addTypes(new Type("ppt"));
 
 		Categorie categorie1= categorieServiceImp.addCategorie(new Categorie("Courrier"));
 		Categorie categorie2= categorieServiceImp.addCategorie(new Categorie("Facture"));

@@ -1,7 +1,8 @@
 package com.document.document.service.Impdocservice;
 
 import com.document.document.domain.Type;
-import com.document.document.repository.TypeRepository;
+import com.document.document.repository.dataverification.TypeRepository;
+import com.document.document.repository.data.VerifiactionType;
 import com.document.document.service.docservice.TypeService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -12,13 +13,15 @@ import java.util.List;
 public class TypeServiceImp implements TypeService {
 
     private TypeRepository typeRepository;
+    private VerifiactionType verifiactionType;
 
-    public TypeServiceImp(TypeRepository typeRepository) {
+    public TypeServiceImp(TypeRepository typeRepository, VerifiactionType verifiactionType) {
         this.typeRepository = typeRepository;
+        this.verifiactionType = verifiactionType;
     }
 
     @Override
-    public Type addServices(Type type) {
+    public Type addTypes(Type type) {
         return typeRepository.save(type);
     }
 
@@ -44,7 +47,7 @@ public class TypeServiceImp implements TypeService {
 
     @Override
     public boolean isTypeExist(long id) {
-        return false;
+        return verifiactionType.isTypeExist(id);
     }
 
     @Override

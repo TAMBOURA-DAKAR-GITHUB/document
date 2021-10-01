@@ -1,7 +1,7 @@
 package com.document.document.service.Impdocservice;
 
 import com.document.document.domain.Document;
-import com.document.document.repository.DocumentRepository;
+import com.document.document.repository.dataverification.DocumentRepository;
 import com.document.document.service.docservice.DocumentService;
 import org.springframework.stereotype.Service;
 

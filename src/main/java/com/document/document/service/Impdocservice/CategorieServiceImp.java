@@ -1,7 +1,7 @@
 package com.document.document.service.Impdocservice;
 
 import com.document.document.domain.Categorie;
-import com.document.document.repository.CategorieRepository;
+import com.document.document.repository.dataverification.CategorieRepository;
 import com.document.document.service.docservice.CategorieService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;

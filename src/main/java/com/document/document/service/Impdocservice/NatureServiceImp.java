@@ -1,7 +1,7 @@
 package com.document.document.service.Impdocservice;
 
 import com.document.document.domain.Nature;
-import com.document.document.repository.NatureRepository;
+import com.document.document.repository.dataverification.NatureRepository;
 import com.document.document.service.docservice.NatureService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;

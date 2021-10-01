@@ -1,5 +1,6 @@
 package com.document.document.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
@@ -16,6 +17,7 @@ public class Type implements Serializable {
     @NotNull
     private String typeDocs;
     @OneToMany(mappedBy = "type")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Collection<Document> documents;
 
     public Type() {
