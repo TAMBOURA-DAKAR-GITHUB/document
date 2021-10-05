@@ -1,19 +1,19 @@
-package com.document.document.repository.data;
+package com.document.document.repository.Verification;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class VerifiactionService {
+public class VerifiactionAgent {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
 
-    public  boolean isServiceExist(long id)
+    public  boolean isAgentExist(long id)
     {
-        String sql = "SELECT COUNT(*) FROM service where  id_service =?";
+        String sql = "SELECT COUNT(*) FROM agent where  id_agent =?";
 
         int count = jdbcTemplate.queryForObject(sql, new Object[] { id }, Integer.class);
         if (count >= 1)

@@ -1,19 +1,19 @@
-package com.document.document.repository.data;
+package com.document.document.repository.Verification;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class VerifiactionDocument {
+public class VerifiactionService {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
 
-    public  boolean isDocumentExist(long id)
+    public  boolean isServiceExist(long id)
     {
-        String sql = "SELECT COUNT(*) FROM document where  id_categorie =?";
+        String sql = "SELECT COUNT(*) FROM SERVICES  where  id_service =?";
 
         int count = jdbcTemplate.queryForObject(sql, new Object[] { id }, Integer.class);
         if (count >= 1)

@@ -1,5 +1,6 @@
 package com.document.document.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ public class Roles implements Serializable {
     private String roles;
 
     @OneToMany(mappedBy = "roles")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Collection<Agent> agents;
 
     public Roles() {
@@ -51,12 +53,12 @@ public class Roles implements Serializable {
         this.agents = agents;
     }
 
-    @Override
-    public String toString() {
-        return "Roles{" +
-                "idRoles=" + idRoles +
-                ", roles='" + roles + '\'' +
-                ", agents=" + agents +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Roles{" +
+//                "idRoles=" + idRoles +
+//                ", roles='" + roles + '\'' +
+//                ", agents=" + agents +
+//                '}';
+//    }
 }

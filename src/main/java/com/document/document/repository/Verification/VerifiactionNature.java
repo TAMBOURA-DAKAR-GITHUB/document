@@ -1,4 +1,4 @@
-package com.document.document.repository.data;
+package com.document.document.repository.Verification;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

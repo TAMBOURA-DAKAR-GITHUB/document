@@ -1,7 +1,8 @@
 package com.document.document.service.Impdocservice;
 
 import com.document.document.domain.Services;
-import com.document.document.repository.dataverification.ServicesRepository;
+import com.document.document.repository.Verification.VerifiactionService;
+import com.document.document.repository.data.ServicesRepository;
 import com.document.document.service.docservice.ServicesService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -12,9 +13,11 @@ import java.util.List;
 public class ServicesServiceImp implements ServicesService {
 
     private ServicesRepository servicesRepository;
+    private VerifiactionService verifiactionService;
 
-    public ServicesServiceImp(ServicesRepository servicesRepository) {
+    public ServicesServiceImp(ServicesRepository servicesRepository, VerifiactionService verifiactionService) {
         this.servicesRepository = servicesRepository;
+        this.verifiactionService = verifiactionService;
     }
 
     @Override
@@ -44,7 +47,7 @@ public class ServicesServiceImp implements ServicesService {
 
     @Override
     public boolean isServicesExist(long id) {
-        return false;
+        return verifiactionService.isServiceExist(id);
     }
 
     @Override

@@ -1,6 +1,5 @@
-package com.document.document.repository.dataverification;
+package com.document.document.repository.data;
 
-import com.document.document.domain.Nature;
 import com.document.document.domain.Services;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

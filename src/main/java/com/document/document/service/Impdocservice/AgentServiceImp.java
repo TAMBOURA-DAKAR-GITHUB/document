@@ -1,7 +1,8 @@
 package com.document.document.service.Impdocservice;
 
 import com.document.document.domain.Agent;
-import com.document.document.repository.dataverification.AgentRepository;
+import com.document.document.repository.Verification.VerifiactionAgent;
+import com.document.document.repository.data.AgentRepository;
 import com.document.document.service.docservice.AgentService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -12,9 +13,11 @@ import java.util.List;
 public class AgentServiceImp implements AgentService {
 
     private AgentRepository agentRepository;
+    private VerifiactionAgent verifiactionAgent;
 
-    public AgentServiceImp(AgentRepository agentRepository) {
+    public AgentServiceImp(AgentRepository agentRepository, VerifiactionAgent verifiactionAgent) {
         this.agentRepository = agentRepository;
+        this.verifiactionAgent = verifiactionAgent;
     }
 
     @Override
@@ -46,7 +49,7 @@ public class AgentServiceImp implements AgentService {
 
     @Override
     public boolean isAgentExist(long id) {
-        return false;
+        return verifiactionAgent.isAgentExist(id);
     }
 
     @Override

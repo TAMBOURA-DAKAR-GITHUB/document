@@ -1,7 +1,8 @@
 package com.document.document.service.Impdocservice;
 
 import com.document.document.domain.Categorie;
-import com.document.document.repository.dataverification.CategorieRepository;
+import com.document.document.repository.Verification.VerifiactionCategorie;
+import com.document.document.repository.data.CategorieRepository;
 import com.document.document.service.docservice.CategorieService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -12,9 +13,11 @@ import java.util.List;
 public class CategorieServiceImp implements CategorieService {
 
     private CategorieRepository categorieRepository;
+    private VerifiactionCategorie verifiactionCategorie;
 
-    public CategorieServiceImp(CategorieRepository categorieRepository) {
+    public CategorieServiceImp(CategorieRepository categorieRepository, VerifiactionCategorie verifiactionCategorie) {
         this.categorieRepository = categorieRepository;
+        this.verifiactionCategorie = verifiactionCategorie;
     }
 
     @Override
@@ -44,7 +47,7 @@ public class CategorieServiceImp implements CategorieService {
 
     @Override
     public boolean isCategorieExist(long id) {
-        return false;
+        return verifiactionCategorie.isCategorieExist(id);
     }
 
     @Override

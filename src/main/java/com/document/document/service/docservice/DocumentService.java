@@ -11,7 +11,7 @@ public interface DocumentService {
     public  Document listeById(long id);
     public Document UpdateDocument(Document document);
     public void deleteDocument(long id);
-    public Document rechercheByCritere(long idC , long idN , long idT);
+    public List<Document> rechercheByCritere(long idC , long idN , long idT);
 
     // la methode pour verifie si un agent existe
     public abstract boolean isDocumentExist(long id);

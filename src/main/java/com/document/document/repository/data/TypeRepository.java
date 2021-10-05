@@ -1,4 +1,4 @@
-package com.document.document.repository.dataverification;
+package com.document.document.repository.data;
 
 
 import com.document.document.domain.Type;

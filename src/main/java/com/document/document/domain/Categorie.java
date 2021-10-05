@@ -1,5 +1,6 @@
 package com.document.document.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
@@ -16,6 +17,7 @@ public class Categorie implements Serializable {
     @NotNull
     private String categorieDocs;
     @OneToMany(mappedBy = "categorie")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Collection<Document> documents;
 
     public Categorie() {
@@ -49,12 +51,12 @@ public class Categorie implements Serializable {
         this.documents = documents;
     }
 
-    @Override
-    public String toString() {
-        return "Categorie{" +
-                "idCategorie=" + idCategorie +
-                ", categorieDocs='" + categorieDocs + '\'' +
-                ", documents=" + documents +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Categorie{" +
+//                "idCategorie=" + idCategorie +
+//                ", categorieDocs='" + categorieDocs + '\'' +
+//                ", documents=" + documents +
+//                '}';
+//    }
 }

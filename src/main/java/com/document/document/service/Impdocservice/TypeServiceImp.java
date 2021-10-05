@@ -1,8 +1,8 @@
 package com.document.document.service.Impdocservice;
 
 import com.document.document.domain.Type;
-import com.document.document.repository.dataverification.TypeRepository;
-import com.document.document.repository.data.VerifiactionType;
+import com.document.document.repository.data.TypeRepository;
+import com.document.document.repository.Verification.VerifiactionType;
 import com.document.document.service.docservice.TypeService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;

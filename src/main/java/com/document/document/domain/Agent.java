@@ -135,19 +135,19 @@ public class Agent implements Serializable {
         this.roles = roles;
     }
 
-    @Override
-    public String toString() {
-        return "Agent{" +
-                "idAgent=" + idAgent +
-                ", nomAgent='" + nomAgent + '\'' +
-                ", prenomAgent='" + prenomAgent + '\'' +
-                ", adresseAgent='" + adresseAgent + '\'' +
-                ", sexeAgent='" + sexeAgent + '\'' +
-                ", emailAgent='" + emailAgent + '\'' +
-                ", passwordAgent='" + passwordAgent + '\'' +
-                ", etatAgent=" + etatAgent +
-                ", services=" + services +
-                ", roles=" + roles +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Agent{" +
+//                "idAgent=" + idAgent +
+//                ", nomAgent='" + nomAgent + '\'' +
+//                ", prenomAgent='" + prenomAgent + '\'' +
+//                ", adresseAgent='" + adresseAgent + '\'' +
+//                ", sexeAgent='" + sexeAgent + '\'' +
+//                ", emailAgent='" + emailAgent + '\'' +
+//                ", passwordAgent='" + passwordAgent + '\'' +
+//                ", etatAgent=" + etatAgent +
+//                ", services=" + services +
+//                ", roles=" + roles +
+//                '}';
+//    }
 }

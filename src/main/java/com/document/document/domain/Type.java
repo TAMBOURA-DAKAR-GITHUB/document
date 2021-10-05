@@ -51,12 +51,12 @@ public class Type implements Serializable {
         this.documents = documents;
     }
 
-    @Override
-    public String toString() {
-        return "Type{" +
-                "idType=" + idType +
-                ", typeDocs='" + typeDocs + '\'' +
-                ", documents=" + documents +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Type{" +
+//                "idType=" + idType +
+//                ", typeDocs='" + typeDocs + '\'' +
+//                ", documents=" + documents +
+//                '}';
+//    }
 }

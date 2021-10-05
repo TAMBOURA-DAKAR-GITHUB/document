@@ -1,7 +1,8 @@
 package com.document.document.service.Impdocservice;
 
 import com.document.document.domain.Roles;
-import com.document.document.repository.dataverification.RolesRepository;
+import com.document.document.repository.Verification.VerifiactionRoles;
+import com.document.document.repository.data.RolesRepository;
 import com.document.document.service.docservice.RolesService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -12,9 +13,11 @@ import java.util.List;
 public class RolesServiceImp implements RolesService {
 
     private RolesRepository rolesRepository;
+    private VerifiactionRoles verifiactionRoles;
 
-    public RolesServiceImp(RolesRepository rolesRepository) {
+    public RolesServiceImp(RolesRepository rolesRepository, VerifiactionRoles verifiactionRoles) {
         this.rolesRepository = rolesRepository;
+        this.verifiactionRoles = verifiactionRoles;
     }
 
     @Override
@@ -44,7 +47,7 @@ public class RolesServiceImp implements RolesService {
 
     @Override
     public boolean isRolesExist(long id) {
-        return false;
+        return verifiactionRoles.isRolesExist(id);
     }
 
     @Override

@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/api/document")
+@RequestMapping("/api/document/type")
 public class TypeController {
 
     private TypeServiceImp typeServiceImp;
@@ -120,24 +120,6 @@ public class TypeController {
         }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

@@ -1,7 +1,8 @@
 package com.document.document.service.Impdocservice;
 
 import com.document.document.domain.Nature;
-import com.document.document.repository.dataverification.NatureRepository;
+import com.document.document.repository.Verification.VerifiactionNature;
+import com.document.document.repository.data.NatureRepository;
 import com.document.document.service.docservice.NatureService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -12,9 +13,11 @@ import java.util.List;
 public class NatureServiceImp implements NatureService {
 
     private NatureRepository natureRepository;
+    private VerifiactionNature verifiactionNature;
 
-    public NatureServiceImp(NatureRepository natureRepository) {
+    public NatureServiceImp(NatureRepository natureRepository, VerifiactionNature verifiactionNature) {
         this.natureRepository = natureRepository;
+        this.verifiactionNature = verifiactionNature;
     }
 
     @Override
@@ -44,7 +47,7 @@ public class NatureServiceImp implements NatureService {
 
     @Override
     public boolean isNatureExist(long id) {
-        return false;
+        return verifiactionNature.isNatureExist(id);
     }
 
     @Override
